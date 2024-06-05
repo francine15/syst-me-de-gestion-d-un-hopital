@@ -16,7 +16,7 @@ class RdV extends Model
         'nomD',
         'telD',
         'medecin',
-        'dateRdV',
+        'date',
         'heure',
         'motif'
     ];

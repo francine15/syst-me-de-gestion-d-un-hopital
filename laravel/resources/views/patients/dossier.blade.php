@@ -30,12 +30,15 @@
   <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">La reference</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/acceuil">Acceuil</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#consultation">consultation</a>
         </li>
@@ -49,7 +52,7 @@
     </div>
   </div>
 </nav>
-    <h1>Hello, world!</h1>
+    
     <section class="book_section layout_padding">
     <div class="container">
       <div class="row">
@@ -57,7 +60,7 @@
           <form method="POST" action="/ordonance">
             <h4>
                 
-              BOOK <span>ordonance</span>
+              Option <span>ordonance</span>
             </h4>
             @csrf
             <div class="form-row ">
@@ -127,7 +130,7 @@
           <form method="POST" action="/traitement">
             
             <h4>
-              BOOK <span>Traitement</span>
+            Option <span>Traitement</span>
             </h4>
             @csrf
             <div class="form-row ">
@@ -197,7 +200,7 @@
           <form method="POST" action="/consultation">
             
             <h4>
-              BOOK <span>consultation</span>
+            Option <span>consultation</span>
             </h4>
 
             @csrf
@@ -276,4 +279,5 @@
 
 
   </body>
+ 
 </html>

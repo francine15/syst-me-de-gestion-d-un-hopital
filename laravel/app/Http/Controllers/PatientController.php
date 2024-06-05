@@ -7,6 +7,7 @@ use App\Models\Ordonnance;
 use Illuminate\Http\Request;
 use \App\Models\Partient;
 use App\Models\Traitement;
+use Exception;
 
 class PatientController extends Controller
 {
@@ -18,6 +19,7 @@ class PatientController extends Controller
         return view('patients.ajout');
     }
     public function insertion(Request $request){
+        try{
 
         $request->validate([
             'nom'=>'required|string',
@@ -38,8 +40,13 @@ class PatientController extends Controller
         $patient->jour=$request->jour;
         $patient->heure=$request->heure;
         $patient->save();
-         
+    
    return redirect('/ajout')->with('statut','ajout effectue avec succes');
+    }catch(Exception $e){
+        $messageErreur=$e->getMessage();
+    $message= ['sucess'=> false, 'error'=>$messageErreur];
+    return response()->json($message,500);
+    }
     }
     public function dossier($id) 
     {
@@ -132,5 +139,15 @@ class PatientController extends Controller
      $patient->save();
      return back();
    }
+   public function afficheacceuil(){
+    
+    return view('acceuil');
+}
+public function supprimer($id) 
+{
+    $patient=Partient::find($id);
+    $patient->delete();
+    return back();
 
+}
 }

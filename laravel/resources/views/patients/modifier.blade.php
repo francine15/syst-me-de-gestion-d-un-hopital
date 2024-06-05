@@ -38,7 +38,7 @@
           <a class="nav-link active" aria-current="page" href="/suivi">Gestion Patients</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/liste_rdv">Gestion Rendez-Vous</a>
+          <a class="nav-link active" aria-current="page" href="/rendez-vous">Gestion Rendez-Vous</a>
         </li>
       </ul>
     </div>
@@ -50,66 +50,62 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <form method="POST" action="/insert">
+          <form method="POST" action="/traitement/modifier">
             <h4>
                 
               Prendre <span>Rendez_Vous</span>
             </h4>
             @csrf
+            @if($patient)
             <div class="form-row ">
               <div class="form-group col-lg-4">
                 <label for="inputPatientName">Nom  </label>
-                <input type="text" class="form-control" id="consultation" placeholder="" name ="nom">
+                <input type="text" class="form-control" id="consultation" placeholder="" name ="nom"value="{{$patient->nom ?? ''}}">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputPatientName">PreNom  </label>
-                <input type="text" class="form-control" id="consultation" placeholder="" name ="prenom">
+                <input type="text" class="form-control" id="consultation" placeholder="" name ="prenom" value="{{$patient->prenom ?? ''}}">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputPatientName">Telephone  </label>
-                <input type="text" class="form-control" id="consultation" placeholder="" name ="tel">
+                <input type="text" class="form-control" id="consultation" placeholder="" name ="tel"value="{{$patient->tel?? ''}}">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputPatientName">email </label>
-                <input type="email" class="form-control" id="consultation" placeholder="" name ="email">
+                <input type="email" class="form-control" id="consultation" placeholder="" name ="email"value="{{$patient->email ?? ''}}">
               </div>
             
             </div>
             <div class="form-row ">
             <div class="form-group col-lg-4">
                 <label for="inputSymptoms">Nom docteur</label>
-                <input type="text" class="form-control" id="inputSymptoms" placeholder="" name ="nomD">
+                <input type="text" class="form-control" id="inputSymptoms" placeholder="" name ="nomD" value="{{$patient->nomD ?? ''}}">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputPhone">tel</label>
-                <input type="text" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX" name ="telD">
+                <input type="text" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX" name ="telD" value="{{$patient->telD ?? ''}}">
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDoctorName">Medecin traitant</label>
-                <select name="medecin" class="form-control wide" id="inputDoctorName">
-                  <option value="Dentiste ">Dentiste</option>
-                  <option value="Medecin generaliste ">Medecin generaliste</option>
-                  <option value="Gynecologue">Gynecologue </option>
-                  <option value="ophtamologue">ophtamologue </option>
-                </select>
+                <input type="text" class="form-control" id="status" placeholder="" name ="medecin" value="{{$patient->medecin?? ''}}">
               </div>
               
             </div>
             <div class="form-row ">
             <div class="form-group col-lg-4">
                 <label for="inputPatientName">Date  </label>
-                <input type="date" class="form-control" id="consultation" placeholder="" name ="date">
+                <input type="date" class="form-control" id="consultation" placeholder="" name ="date"value="{{$patient->dateRdV ?? ''}}">
               </div>
               <div class="form-group col-lg-4">
                 <label for="">heure de Rendez vous</label>
                   
-                <input type="time" class="form-control" id="inputdate" name="heure">
+                <input type="time" class="form-control" id="inputdate" name="heure"value="{{$patient->heure ?? ''}}">
                   
 
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputPhone">Motif</label>
-                <textarea class="form-control" id="inputPhone" placeholder="" name="motif"></textarea>
+                <textarea class="form-control" id="inputPhone" placeholder="" name="motif" value="{{$patient->motif ?? ''}}"></textarea>
               </div>
              
               
@@ -117,6 +113,9 @@
             <div class="btn-box">
               <button type="submit" class="btn ">Sauvegarder</button>
             </div>
+            @else
+            <p>aucun enregistrement trouvé</p>
+            @endif
           </form>
         </div>
       </div>

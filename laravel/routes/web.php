@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('acceuil');
 });
 Route::get('/suivi',[PatientController::class,'affiche'])->name('patients.suivi');
 Route::get('/ajout',[PatientController::class,'ajout'])->name('patients.ajout');
@@ -27,5 +27,10 @@ Route::post('/consultation',[PatientController::class,'consultation']);
 Route::post('/traitement',[PatientController::class,'traitement']);
 Route::post('/ordonance',[PatientController::class,'ordonance']);
 Route::get('/rendez-vous',[RdVController::class,'rendez_vous'])->name('patients.rendez_vous');
-Route::post('/insert',[RdVController::class,'insertion']);
-    
+Route::post('/insert',[PatientController::class,'insertion']);
+Route::get('/liste_rdv',[RdVController::class,'affiche'])->name('patients.liste_rdv');
+Route::get('/supprimer/{id}',[RdVController::class,'supprimer']); 
+Route::get('/modifier/{id}',[RdVController::class,'modifier'])->name('patients.modifier'); 
+Route::post('/traitement/modifier',[RdVController::class,'modifier_traitement']);   
+Route::get('/acceuil',[PatientController::class,'afficheacceuil'])->name('acceuil');
+Route:: get('/supprimer/{id}',[PatientController::class,'supprimer']);
