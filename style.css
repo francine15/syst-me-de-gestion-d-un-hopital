@@ -1,0 +1,122 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: antiquewhite;
+    background-position-x: left GREE;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+h2{
+    margin-top: 20px;
+    padding-left: 110px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+    input[type="text"],
+    input[type="password"],
+    
+select{
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-bottom: 10px;
+}
+
+input[type="sumit"],
+.Connexion{
+    padding: 10px;
+    background-color: #42c14627(color white);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.Compte{
+    padding: 10px;
+    background-color: #42c14627(color white);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Suivant{
+    padding: 10px;
+    background-color: #42c14627(color white);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Créer{
+    padding: 10px;
+    background-color: #42c14627(color white);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+p{
+    background-color: rgb(184, 231, 231);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.contener1{
+    background-color: rgb(220, 125, 125);
+    width: 350px;
+    height: 300px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45vh;
+    flex-direction: column;
+    /*border-left: solid 3px;
+    border-top: solid 3px;
+    border-right: solid 3px;
+    border-width: solid 3px;
+    align-content: center;*/
+}
+h3{
+    margin-left: 10px;
+    margin-top: -30px;
+}
+.conten{
+    width: 250px;
+    height: 20%;
+}
+textarea{
+    width: 50%;
+    height: 200px;
+    margin-top: -10px;
+    border-radius: 20px/20px;
+    border-color: rgb(36, 134, 134);
+    margin-left: 35vh;
+    flex-direction: column;
+}
+h2{
+    margin-top: 100px;
+    text-align: center;
+    margin-left: -115px;
+}
+h4{
+    text-align: center;
+}
+.contener2{
+    background-color: rgb(131, 74, 74);
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.connect{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0vh;
+    flex-direction: column;
+}

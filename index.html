@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICAL HOSPITAL</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>MEDICAL HOSPITAL APP</h1>
+    <h2>Formulaire de connexion</h2>
+    <form action="DBconnexion.php" method="post">
+    <div class="connect">
+        <div>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" required>
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="">Profession</label>
+            <select name="profession" id="profession" required>
+                <option value="">Selectionnez une profession</option>
+                <option value="Médecin">Médecin</option>
+                <option value="Infirmier(e)">Infirmier(e)</option>
+                <option value="Laborantin">Laborantin</option>
+                <option value="Pharmacien(e)">Pharmacien(e)</option>
+                <option value="Receptionniste">Receptionniste</option>
+                <option value="Caissier(e)">Caissier(e)</option>
+            </select>
+        </div>
+        <div class="Connexion">
+            <a href="page1.html">Connexion</a>
+        </div>
+        <div class="Compte">
+            <a href="page2.html">créer un compte</a>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
